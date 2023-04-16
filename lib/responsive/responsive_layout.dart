@@ -15,7 +15,9 @@ class ResponsiveLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        if (constraints.maxWidth <= 500) {
+        if (constraints.maxWidth <=
+            550) //chrome web cihazinda mobil formunu ınceleyebılmek ıcın 550 yaptım
+        {
           return mobileScaffold;
         } else if (constraints.maxWidth < 1100) {
           return tabletScaffold;
